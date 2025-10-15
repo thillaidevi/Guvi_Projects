@@ -1,0 +1,70 @@
+{
+  "login_page": {
+    "admin": {
+      "Username": "admin",
+      "Password": "admin123",
+      "Expected_result": "Pass"
+    },
+    "new_user": {
+      "Username": "testuser",
+      "Password": "secure@123",
+      "Expected_result": "Pass"
+    }
+  },
+  "pim_page": {
+    "new_user": {
+      "Employee": "Thillai Devi K"
+    }
+  },
+  "admin_page": {
+  "new_user": {
+    "Username": "testuser",
+    "Password": "secure@123",
+    "ConfirmPassword": "secure@123",
+    "Role": "ESS",
+    "Employee": "Thillai Devi K",
+    "Status": "Enabled"
+  }
+},
+  "leave_page": {
+    "assignment": {
+      "employee": "Thillai Devi K",
+      "leaveType": "CAN – Vacation",
+      "fromDate": "2025-10-10",
+      "toDate": "2025-10-10",
+      "comment": "Vacation Leave"
+    },
+    "entitlement": {
+      "employee": "Thillai Devi K",
+      "leaveType": "CAN – Vacation",
+      "leavePeriod": "2020-01-01 - 2020-12-31",
+      "entitlement": "20"
+    },
+    "assign_leave": {
+      "employee": "Thillai Devi K",
+      "leaveType": "CAN - Vacation",
+      "fromDate": "2025-10-10",
+      "toDate": "2025-10-10",
+      "duration": "Full Day",
+      "comments": "Vacation Leave"
+    }
+  },
+
+  "claim_data" : {
+    "Event": "Accommodation",
+    "ExpenseType": "Accommodation",
+    "Date": "2025-10-10",
+    "Amount": "50000",
+    "Remarks": "Accommodation Expenses",
+    "Currency": "Albanian Lek",
+    "ClaimType": "Accommodation"
+  },
+
+  "assign_claim_data" : {
+    "ExpenseType": "Accommodation",
+    "Date": "2025-10-10",
+    "Amount": "50000",
+    "Note": "Accommodation Expense"
+  }
+
+  }

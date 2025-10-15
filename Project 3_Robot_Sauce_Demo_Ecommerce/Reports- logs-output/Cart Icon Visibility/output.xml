@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-19T20:19:30.012100" rpa="false" schemaversion="5">
+<suite id="s1" name="Cart Icon Visibility" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\cart_icon_visibility.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T20:19:30.252504" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T20:19:30.252338" elapsed="1.934128"/>
+</kw>
+<test id="s1-t1" name="Check Cart Icon Visibility" line="17">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in using a valid user and confirm expected login outcome</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:19:32.187299" elapsed="0.000141"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T20:19:32.207475" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T20:19:32.297891" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T20:19:32.378897" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T20:19:32.488766" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T20:19:42.709582" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>${VALID_USERNAME}</arg>
+<arg>${EXPECTATION}</arg>
+<status status="PASS" start="2025-09-19T20:19:32.187665" elapsed="10.522023"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate that the dashboard is displayed if login was successful</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:19:42.710095" elapsed="0.000164"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T20:19:42.715905" level="INFO">Dashboard visible for user: standard_user</msg>
+<arg>${VALID_USERNAME}</arg>
+<arg>${EXPECTATION}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T20:19:42.710540" elapsed="0.005436"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Check that the cart icon is present on the product listing page</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:19:42.716237" elapsed="0.000076"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-09-19T20:19:42.723814" level="INFO">Current page contains element 'id=shopping_cart_container'.</msg>
+<arg>id=shopping_cart_container</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-09-19T20:19:42.716470" elapsed="0.007439"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T20:19:42.858540" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Check%20Cart%20Icon%20Visibility_standard_user_EXPECT_SUCCESS_screenshot.png"&gt;&lt;img src="Check%20Cart%20Icon%20Visibility_standard_user_EXPECT_SUCCESS_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_${VALID_USERNAME}_${EXPECTATION}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T20:19:42.724207" elapsed="0.134438"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log confirmation that the cart icon is visible after login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:19:42.858930" elapsed="0.000090"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T20:19:42.859307" level="INFO">Cart icon is visible after login</msg>
+<arg>Cart icon is visible after login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T20:19:42.859178" elapsed="0.000185"/>
+</kw>
+<doc>Verify if the cart icon is visible on the product listing page post login.</doc>
+<tag>cart</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-09-19T20:19:32.186690" elapsed="10.673022"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T20:19:42.860529" elapsed="2.211376"/>
+</kw>
+<status status="PASS" start="2025-09-19T20:19:30.013920" elapsed="15.058088"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">cart</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Cart Icon Visibility" id="s1" pass="1" fail="0" skip="0">Cart Icon Visibility</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

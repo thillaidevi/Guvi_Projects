@@ -1,0 +1,116 @@
+
+  {
+    "test_name": "tests/test_test_dobby_quick_replies.py::test_dobby_assistant_presence",
+    "status": "passed",
+    "screenshot": "screenshots/test_dobby_assistant_presence_passed.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:27:05.505687"
+  },
+  {
+    "test_name": "tests/test_title_verification.py::test_guvi_title",
+    "status": "passed",
+    "screenshot": "screenshots/test_guvi_title_passed.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:27:13.293348"
+  },
+  {
+    "test_name": "tests/test_url_validation.py::test_url_is_valid",
+    "status": "passed",
+    "screenshot": "screenshots/test_url_is_valid_passed.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:27:21.173032"
+  },
+  {
+    "test_name": "tests/test_base_page_menu_item.py::test_menu_items_display",
+    "status": "passed",
+    "screenshot": "screenshots/test_menu_items_display_PASSED_20250824_213022.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:30:22.867437"
+  },
+  {
+    "test_name": "tests/test_login_button.py::test_login_button_visibility_and_clickability",
+    "status": "passed",
+    "screenshot": "screenshots/test_login_button_visibility_and_clickability_PASSED_20250824_213031.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:30:32.139539"
+  },
+  {
+    "test_name": "tests/test_login_logout_flow.py::test_login_logout_flow",
+    "status": "passed",
+    "screenshot": "screenshots/test_login_logout_flow_PASSED_20250824_213059.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:30:59.271748"
+  },
+  {
+    "test_name": "tests/test_login_with_invalid_credentials.py::test_login_with_invalid_credentials",
+    "status": "passed",
+    "screenshot": "screenshots/test_login_with_invalid_credentials_PASSED_20250824_213128.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:31:29.140005"
+  },
+  {
+    "test_name": "tests/test_login_with_valid_credentials.py::test_login_with_valid_credentials",
+    "status": "passed",
+    "screenshot": "screenshots/test_login_with_valid_credentials_PASSED_20250824_213155.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:31:55.625800"
+  },
+  {
+    "test_name": "tests/test_signup_button.py::test_signup_button_visibility_and_clickability",
+    "status": "passed",
+    "screenshot": "screenshots/test_signup_button_visibility_and_clickability_PASSED_20250824_213204.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:32:04.920534"
+  },
+  {
+    "test_name": "tests/test_signup_navigation.py::TestSignUpNavigation::test_signup_redirect",
+    "status": "passed",
+    "screenshot": "screenshots/chrome/test_signup_redirect_2025-08-24_15-15-20.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:32:14.562775"
+  },
+  {
+    "test_name": "tests/test_test_dobby_quick_replies.py::test_dobby_assistant_presence",
+    "status": "passed",
+    "screenshot": "screenshots/test_dobby_assistant_presence_PASSED_20250824_213243.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:32:44.270764"
+  },
+  {
+    "test_name": "tests/test_title_verification.py::test_guvi_title",
+    "status": "passed",
+    "screenshot": "screenshots/test_guvi_title_PASSED_20250824_213251.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:32:52.043890"
+  },
+  {
+    "test_name": "tests/test_url_validation.py::test_url_is_valid",
+    "status": "passed",
+    "screenshot": "screenshots/test_url_is_valid_PASSED_20250824_213259.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:32:59.572204"
+  },
+  {
+    "test_name": "tests/test_login_with_invalid_credentials.py::test_login_with_invalid_credentials",
+    "status": "passed",
+    "screenshot": "screenshots/test_login_with_invalid_credentials_PASSED_20250824_213834.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:38:34.658648"
+  },
+  {
+    "test_name": "tests/test_login_with_valid_credentials.py::test_login_with_valid_credentials",
+    "status": "passed",
+    "screenshot": "screenshots/test_login_with_valid_credentials_PASSED_20250824_213954.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:39:54.904303"
+  },
+  {
+    "test_name": "tests/test_signup_button.py::test_signup_button_visibility_and_clickability",
+    "status": "passed",
+    "screenshot": "screenshots/test_signup_button_visibility_and_clickability_PASSED_20250824_214016.png",
+    "error": null,
+    "timestamp": "2025-08-24T21:40:16.973066"
+  }
+
+  
+]

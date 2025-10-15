@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-19T19:25:33.857574" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Invalid Credential" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\login_invalid_credential.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T19:25:34.096288" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T19:25:34.096106" elapsed="1.997786"/>
+</kw>
+<test id="s1-t1" name="Login With Invalid Credentials" line="17">
+<kw name="Comment" owner="BuiltIn">
+<arg>Enter an invalid username to simulate unauthorized access</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T19:25:36.095380" elapsed="0.000275"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T19:25:36.096804" level="INFO">Typing text 'invalid_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${INVALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T19:25:36.096083" elapsed="0.138183"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Enter an invalid password to complete the invalid credential pair</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T19:25:36.234706" elapsed="0.000161"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T19:25:36.235354" level="INFO">Typing text 'wrong_password' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T19:25:36.235083" elapsed="0.093825"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Click the login button to submit the credentials</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T19:25:36.329312" elapsed="0.000155"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-19T19:25:36.330961" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T19:25:36.330635" elapsed="0.081502"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Dismiss any alert that may appear due to failed login attempt</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T19:25:36.412669" elapsed="0.000176"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-19T19:25:36.413839" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T19:25:41.551794" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T19:25:41.551995" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="FAIL" start="2025-09-19T19:25:36.413610" elapsed="5.140901">Alert not found in 5 seconds.</status>
+</kw>
+<arg>Handle Alert</arg>
+<arg>action=DISMISS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-19T19:25:36.413156" elapsed="5.141456"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate that dashboard access is denied and login fails as expected</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T19:25:41.554897" elapsed="0.000111"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T19:25:41.577556" level="INFO">Error message validated for user: invalid_user → 'Epic sadface: Username and password do not match any user in this service'</msg>
+<arg>${INVALID_USERNAME}</arg>
+<arg>${EXPECTATION}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T19:25:41.555274" elapsed="0.022395"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T19:25:41.660001" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login%20With%20Invalid%20Credentials_invalid_user_EXPECT_ERROR_screenshot.png"&gt;&lt;img src="Login%20With%20Invalid%20Credentials_invalid_user_EXPECT_ERROR_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_${INVALID_USERNAME}_${expectation}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T19:25:41.577981" elapsed="0.082179"/>
+</kw>
+<doc>Attempt to log in using non-standard credentials and validate the response.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="PASS" start="2025-09-19T19:25:36.094300" elapsed="5.566198"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T19:25:41.661372" elapsed="2.172442"/>
+</kw>
+<status status="PASS" start="2025-09-19T19:25:33.859119" elapsed="9.974812"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">negative</stat>
+</tag>
+<suite>
+<stat name="Login Invalid Credential" id="s1" pass="1" fail="0" skip="0">Login Invalid Credential</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

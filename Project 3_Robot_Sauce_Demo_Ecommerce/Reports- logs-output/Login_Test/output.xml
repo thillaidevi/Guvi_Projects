@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-19T18:23:48.587412" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\login_test.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T18:23:48.882943" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T18:23:48.882703" elapsed="1.968431"/>
+</kw>
+<test id="s1-t1" name="Login – standard_user should succeed" line="20">
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate login for standard_user (expected to succeed)</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:23:50.853070" elapsed="0.000296"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T18:23:50.854144" level="INFO">${username} = standard_user</msg>
+<var>${username}</var>
+<arg>standard_user</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T18:23:50.853806" elapsed="0.000392"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T18:23:50.854713" level="INFO">${expectation} = EXPECT_SUCCESS</msg>
+<var>${expectation}</var>
+<arg>EXPECT_SUCCESS</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T18:23:50.854505" elapsed="0.000257"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T18:23:50.883064" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T18:23:51.008455" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T18:23:51.083010" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T18:23:51.174243" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T18:24:01.392620" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<status status="PASS" start="2025-09-19T18:23:50.855117" elapsed="10.537674"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Dismiss any unexpected alert that may appear post-login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:01.393163" elapsed="0.000132"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-19T18:24:01.393749" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T18:24:06.552319" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-37.png"&gt;&lt;img src="selenium-screenshot-37.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T18:24:06.552486" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="FAIL" start="2025-09-19T18:24:01.393598" elapsed="5.164032">Alert not found in 5 seconds.</status>
+</kw>
+<arg>Handle Alert</arg>
+<arg>action=DISMISS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-19T18:24:01.393469" elapsed="5.164282"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Confirm dashboard visibility based on expected login outcome and take screenshot</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:06.558133" elapsed="0.000113"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T18:24:06.563968" level="INFO">Dashboard visible for user: standard_user</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T18:24:06.558416" elapsed="0.005615"/>
+</kw>
+<kw name="Capture Login Outcome Screenshot">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T18:24:06.564981" level="INFO">${filename} = Login – standard_user should succeed_standard_user_EXPECT_SUCCESS_screenshot.png</msg>
+<var>${filename}</var>
+<arg>${TEST NAME}_${username}_${expectation}_screenshot.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T18:24:06.564768" elapsed="0.000244"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T18:24:06.684780" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login%20%E2%80%93%20standard_user%20should%20succeed_standard_user_EXPECT_SUCCESS_screenshot.png"&gt;&lt;img src="Login%20%E2%80%93%20standard_user%20should%20succeed_standard_user_EXPECT_SUCCESS_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${filename}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T18:24:06.565097" elapsed="0.119808"/>
+</kw>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<status status="PASS" start="2025-09-19T18:24:06.564363" elapsed="0.120646"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T18:24:06.685542" level="INFO">standard_user login validated with EXPECT_SUCCESS</msg>
+<arg>${username} login validated with ${expectation}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T18:24:06.685358" elapsed="0.000266"/>
+</kw>
+<doc>Validate login for standard_user with expected success</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<tag>standard_user</tag>
+<status status="PASS" start="2025-09-19T18:23:50.851564" elapsed="15.834230"/>
+</test>
+<test id="s1-t2" name="Login – performance_glitch_user should succeed" line="37">
+<kw name="Comment" owner="BuiltIn">
+<arg>Reset to login page before testing next user</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:06.686789" elapsed="0.000084"/>
+</kw>
+<kw name="Reset To Login Page" owner="LoginLibrary">
+<msg time="2025-09-19T18:24:06.687129" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" start="2025-09-19T18:24:06.687021" elapsed="0.077409"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate login for performance_glitch_user (expected to succeed but may load slowly)</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:06.764765" elapsed="0.000157"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T18:24:06.765344" level="INFO">${username} = performance_glitch_user</msg>
+<var>${username}</var>
+<arg>performance_glitch_user</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T18:24:06.765163" elapsed="0.000211"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T18:24:06.765694" level="INFO">${expectation} = EXPECT_SUCCESS</msg>
+<var>${expectation}</var>
+<arg>EXPECT_SUCCESS</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T18:24:06.765573" elapsed="0.000145"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T18:24:06.778182" level="INFO">Typing text 'performance_glitch_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T18:24:06.847864" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T18:24:06.908728" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T18:24:11.974422" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T18:24:22.192426" level="INFO">No alert for user: performance_glitch_user
+ No modal appeared for user: performance_glitch_user
+ Dashboard appeared for user: performance_glitch_user on attempt 1</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<status status="PASS" start="2025-09-19T18:24:06.765908" elapsed="15.426634"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Dismiss any unexpected alert that may appear post-login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:22.192884" elapsed="0.000145"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-19T18:24:22.193593" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T18:24:27.346487" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T18:24:27.346661" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="FAIL" start="2025-09-19T18:24:22.193428" elapsed="5.154267">Alert not found in 5 seconds.</status>
+</kw>
+<arg>Handle Alert</arg>
+<arg>action=DISMISS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-19T18:24:22.193256" elapsed="5.154541"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait for inventory page to load due to potential performance delays</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.348068" elapsed="0.000094"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>class=inventory_list</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.348385" elapsed="0.005603"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Confirm dashboard visibility based on expected login outcome and take screenshot</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.354255" elapsed="0.000082"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T18:24:27.359710" level="INFO">Dashboard appeared for user: performance_glitch_user on attempt 1</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.354479" elapsed="0.005299"/>
+</kw>
+<kw name="Capture Login Outcome Screenshot">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T18:24:27.360603" level="INFO">${filename} = Login – performance_glitch_user should succeed_performance_glitch_user_EXPECT_SUCCESS_screenshot.png</msg>
+<var>${filename}</var>
+<arg>${TEST NAME}_${username}_${expectation}_screenshot.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.360441" elapsed="0.000188"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T18:24:27.477735" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login%20%E2%80%93%20performance_glitch_user%20should%20succeed_performance_glitch_user_EXPECT_SUCCESS_screenshot.png"&gt;&lt;img src="Login%20%E2%80%93%20performance_glitch_user%20should%20succeed_performance_glitch_user_EXPECT_SUCCESS_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${filename}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.360716" elapsed="0.117138"/>
+</kw>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<status status="PASS" start="2025-09-19T18:24:27.360107" elapsed="0.117859"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T18:24:27.478500" level="INFO">performance_glitch_user login validated with EXPECT_SUCCESS</msg>
+<arg>${username} login validated with ${expectation}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.478299" elapsed="0.000264"/>
+</kw>
+<doc>Validate login for performance_glitch_user with expected success and slow load</doc>
+<tag>login</tag>
+<tag>performance_glitch_user</tag>
+<tag>regression</tag>
+<status status="PASS" start="2025-09-19T18:24:06.686248" elapsed="20.792539"/>
+</test>
+<test id="s1-t3" name="Login – locked_out_user should fail" line="61">
+<kw name="Comment" owner="BuiltIn">
+<arg>Reset to login page before testing next user</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.479614" elapsed="0.000087"/>
+</kw>
+<kw name="Reset To Login Page" owner="LoginLibrary">
+<msg time="2025-09-19T18:24:27.479940" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" start="2025-09-19T18:24:27.479843" elapsed="0.071348"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate login for locked_out_user (expected to fail)</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.551739" elapsed="0.000177"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T18:24:27.552283" level="INFO">${username} = locked_out_user</msg>
+<var>${username}</var>
+<arg>locked_out_user</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.552101" elapsed="0.000211"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T18:24:27.552591" level="INFO">${expectation} = EXPECT_ERROR</msg>
+<var>${expectation}</var>
+<arg>EXPECT_ERROR</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T18:24:27.552463" elapsed="0.000153"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T18:24:27.563306" level="INFO">Typing text 'locked_out_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T18:24:27.625273" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T18:24:27.680897" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T18:24:27.737145" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T18:24:37.948444" level="INFO">Current page contains element 'css=h3[data-test='error']'.</msg>
+<msg time="2025-09-19T18:24:37.948531" level="INFO">Verifying element 'css=h3[data-test='error']' contains exact text 'Epic sadface: Sorry, this user has been locked out.'.</msg>
+<msg time="2025-09-19T18:24:37.964236" level="INFO">No alert for user: locked_out_user
+ No modal appeared for user: locked_out_user
+ Error message validated for locked out user: locked_out_user</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<status status="PASS" start="2025-09-19T18:24:27.552764" elapsed="10.411568"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Dismiss any unexpected alert that may appear post-login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:37.964686" elapsed="0.000104"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-19T18:24:37.965213" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T18:24:43.085076" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T18:24:43.085303" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="FAIL" start="2025-09-19T18:24:37.965084" elapsed="5.121156">Alert not found in 5 seconds.</status>
+</kw>
+<arg>Handle Alert</arg>
+<arg>action=DISMISS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-19T18:24:37.964959" elapsed="5.121375"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Confirm dashboard is not accessible due to login restriction</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T18:24:43.086616" elapsed="0.000108"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T18:24:43.103101" level="INFO">Error message validated for user: locked_out_user → 'Epic sadface: Sorry, this user has been locked out.'</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T18:24:43.087042" elapsed="0.016143"/>
+</kw>
+<kw name="Capture Login Outcome Screenshot">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T18:24:43.103985" level="INFO">${filename} = Login – locked_out_user should fail_locked_out_user_EXPECT_ERROR_screenshot.png</msg>
+<var>${filename}</var>
+<arg>${TEST NAME}_${username}_${expectation}_screenshot.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T18:24:43.103820" elapsed="0.000191"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T18:24:43.203846" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login%20%E2%80%93%20locked_out_user%20should%20fail_locked_out_user_EXPECT_ERROR_screenshot.png"&gt;&lt;img src="Login%20%E2%80%93%20locked_out_user%20should%20fail_locked_out_user_EXPECT_ERROR_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${filename}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T18:24:43.104097" elapsed="0.099914"/>
+</kw>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<status status="PASS" start="2025-09-19T18:24:43.103512" elapsed="0.100653"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T18:24:43.204658" level="INFO">locked_out_user login validated with EXPECT_ERROR</msg>
+<arg>${username} login validated with ${expectation}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T18:24:43.204456" elapsed="0.000274"/>
+</kw>
+<doc>Validate login for locked_out_user with expected failure</doc>
+<tag>locked_out_user</tag>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="PASS" start="2025-09-19T18:24:27.479208" elapsed="15.725718"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T18:24:43.205904" elapsed="2.276944"/>
+</kw>
+<status status="PASS" start="2025-09-19T18:23:48.589404" elapsed="56.893592"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">locked_out_user</stat>
+<stat pass="3" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">negative</stat>
+<stat pass="1" fail="0" skip="0">performance_glitch_user</stat>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">standard_user</stat>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="3" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

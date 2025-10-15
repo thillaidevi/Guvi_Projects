@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-19T20:29:52.126142" rpa="false" schemaversion="5">
+<suite id="s1" name="Random Product Selection And Data Extraction" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\random_product_selection_and_data_extraction.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T20:29:52.361027" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T20:29:52.360858" elapsed="1.988382"/>
+</kw>
+<test id="s1-t1" name="Random Product Selection And Data Extraction" line="12">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in using a valid standard user and confirm successful login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:29:54.350796" elapsed="0.000323"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T20:29:54.374994" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T20:29:54.481583" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T20:29:54.566322" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T20:29:54.663368" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T20:30:04.889488" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T20:29:54.351644" elapsed="10.537951"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait until the inventory/product listing page is fully loaded</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:30:04.889998" elapsed="0.000125"/>
+</kw>
+<kw name="Wait Until Inventory Page Is Loaded" owner="InventoryLibrary">
+<msg time="2025-09-19T20:30:04.901425" level="INFO"> Inventory page loaded successfully.</msg>
+<status status="PASS" start="2025-09-19T20:30:04.890350" elapsed="0.011199"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Randomly select 4 products from the available 6 to simulate varied user behavior</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:30:04.901863" elapsed="0.000128"/>
+</kw>
+<kw name="Select Random Products" owner="InventoryLibrary">
+<msg time="2025-09-19T20:30:04.994423" level="INFO"> Selected 4 random products.</msg>
+<arg>4</arg>
+<status status="PASS" start="2025-09-19T20:30:04.902157" elapsed="0.092374"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log the names and prices of the selected products for validation and reporting</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:30:04.994848" elapsed="0.000110"/>
+</kw>
+<kw name="Log Selected Product Details" owner="InventoryLibrary">
+<msg time="2025-09-19T20:30:04.995253" level="INFO">1. Product: Sauce Labs Bolt T-Shirt | Price: $15.99</msg>
+<msg time="2025-09-19T20:30:04.995285" level="INFO">2. Product: Sauce Labs Bike Light | Price: $9.99</msg>
+<msg time="2025-09-19T20:30:04.995314" level="INFO">3. Product: Sauce Labs Onesie | Price: $7.99</msg>
+<msg time="2025-09-19T20:30:04.995340" level="INFO">4. Product: Test.allTheThings() T-Shirt (Red) | Price: $15.99</msg>
+<status status="PASS" start="2025-09-19T20:30:04.995160" elapsed="0.000218"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T20:30:05.110832" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Random%20Product%20Selection%20And%20Data%20Extraction_screenshot.png"&gt;&lt;img src="Random%20Product%20Selection%20And%20Data%20Extraction_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T20:30:04.995564" elapsed="0.115372"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Capture a screenshot of selected products for visual confirmation and debugging</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:30:05.111297" elapsed="0.000095"/>
+</kw>
+<doc>Randomly select 4 out of the 6 listed products and fetch their names and prices.</doc>
+<status status="PASS" start="2025-09-19T20:29:54.349618" elapsed="10.761979"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T20:30:05.112391" elapsed="2.224213"/>
+</kw>
+<status status="PASS" start="2025-09-19T20:29:52.127755" elapsed="15.208971"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Random Product Selection And Data Extraction" id="s1" pass="1" fail="0" skip="0">Random Product Selection And Data Extraction</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

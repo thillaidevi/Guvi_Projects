@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-19T20:09:43.418468" rpa="false" schemaversion="5">
+<suite id="s1" name="Logout Functionality" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\logout_functionality.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T20:09:43.647225" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T20:09:43.647063" elapsed="2.385862"/>
+</kw>
+<test id="s1-t1" name="Validate Logout Functionality" line="16">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in using a valid standard user and confirm successful login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:09:46.033961" elapsed="0.000138"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T20:09:46.051613" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T20:09:46.149946" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T20:09:46.235154" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T20:09:46.332357" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T20:09:56.546090" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T20:09:46.034321" elapsed="10.511884"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Confirm that the dashboard is displayed if login was successful</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:09:56.546532" elapsed="0.000105"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T20:09:56.552020" level="INFO">Dashboard visible for user: standard_user</msg>
+<arg>${VALID_USERNAME}</arg>
+<arg>${EXPECTATION}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T20:09:56.546821" elapsed="0.005265"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T20:09:56.672292" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Logout%20Functionality_standard_user_EXPECT_SUCCESS_screenshot.png"&gt;&lt;img src="Validate%20Logout%20Functionality_standard_user_EXPECT_SUCCESS_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_${VALID_USERNAME}_${expectation}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T20:09:56.552358" elapsed="0.120047"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Click the logout button to initiate user sign-out</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:09:56.672712" elapsed="0.000113"/>
+</kw>
+<kw name="Click Logout Button" owner="LoginLibrary">
+<msg time="2025-09-19T20:09:56.673100" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<msg time="2025-09-19T20:09:56.943706" level="INFO">Clicking element 'id=logout_sidebar_link'.</msg>
+<msg time="2025-09-19T20:09:57.008642" level="INFO">Logout button clicked, returning to login screen</msg>
+<doc>Opens the side menu and clicks the logout button to return to the login screen.</doc>
+<status status="PASS" start="2025-09-19T20:09:56.673004" elapsed="0.335732"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Verify that the login page is displayed after logout</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:09:57.009048" elapsed="0.000116"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-09-19T20:09:57.022329" level="INFO">Current page contains element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-09-19T20:09:57.009366" elapsed="0.013086"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T20:09:57.097215" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Logout%20Functionality_screenshot.png"&gt;&lt;img src="Validate%20Logout%20Functionality_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T20:09:57.022896" elapsed="0.074437"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log confirmation that logout was successful and user is redirected</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T20:09:57.097617" elapsed="0.000096"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T20:09:57.097976" level="INFO">Logout successful, user returned to login screen</msg>
+<arg>Logout successful, user returned to login screen</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T20:09:57.097882" elapsed="0.000131"/>
+</kw>
+<doc>Check whether the logout button is visible after login and whether clicking it properly logs the user out.</doc>
+<tag>logout</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-09-19T20:09:46.033198" elapsed="11.064984"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T20:09:57.098907" elapsed="2.235004"/>
+</kw>
+<status status="PASS" start="2025-09-19T20:09:43.420040" elapsed="15.914078"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">logout</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Logout Functionality" id="s1" pass="1" fail="0" skip="0">Logout Functionality</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

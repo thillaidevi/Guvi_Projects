@@ -1,0 +1,113 @@
+2025-09-12 15:14:45,562 - INFO -  Credentials entered successfully
+2025-09-12 15:14:54,910 - INFO -  Leave tab clicked
+2025-09-12 15:14:55,065 - INFO -  Leave page loaded successfully
+2025-09-12 15:14:58,021 - INFO - Navigating to 'Add Leave Entitlement' page
+2025-09-12 15:14:59,495 - INFO -  Clicked Leave tab from sidebar
+2025-09-12 15:15:00,353 - INFO -  Opened Entitlements dropdown
+2025-09-12 15:15:01,133 - INFO -  Clicked 'Add Entitlements' link
+2025-09-12 15:15:01,276 - INFO -  'Add Leave Entitlement' page loaded successfully
+2025-09-12 15:15:01,276 - INFO - Assigning entitlement for Thillai Devi K | Type: CAN â€“ Vacation | Period: 2020-01-01 - 2020-12-31 | Days: 20
+2025-09-12 15:15:03,874 - INFO - Already on 'Add Leave Entitlement' page — skipping navigation
+2025-09-12 15:15:03,874 - INFO - Attempt 1: Selecting employee 'Thillai Devi K'
+2025-09-12 15:15:05,857 - INFO -  Employee resolved: Thillai Devi K
+2025-09-12 15:15:05,857 - INFO - Raw leave type input: CAN â€“ Vacation
+2025-09-12 15:15:05,857 - INFO - Normalized leave type: can - vacation
+2025-09-12 15:15:06,342 - INFO - Clicked Leave Type dropdown
+2025-09-12 15:15:06,695 - INFO - Selected leave type: can - vacation
+2025-09-12 15:15:06,696 - INFO - Attempt 1: Filling entitlement value '20'
+2025-09-12 15:15:07,352 - INFO -  Entitlement value confirmed: 20
+2025-09-12 15:15:08,025 - INFO -  Save button clicked
+2025-09-12 15:15:09,545 - INFO -  Confirmation modal: Existing Entitlement value 0.00 will be updated to 20.00
+2025-09-12 15:15:10,202 - INFO -  Confirm button clicked
+2025-09-12 15:15:14,645 - INFO -  Entitlement record confirmed — Admin
+PIM
+Leave
+Time
+Recruitment
+My Info
+Performance
+Dashboard
+Directory
+Maintenance
+Claim
+Buzz
+Leave
+Entitlements
+Upgrade
+
+Johnny Seed
+
+Apply
+My Leave
+Entitlements 
+Reports 
+Configure 
+Leave List
+Assign Leave
+Leave Entitlements
+Employee Name
+Leave Type
+CAN - Vacation
+Leave Period
+2025-01-01 - 2025-31-12
+
+* Required
+
+Search
+
+
+ Add
+Total 20.00 Day(s)
+(1) Record Found
+Leave Type
+Entitlement Type
+Valid From
+Valid To
+Days
+Actions
+CAN - Vacation
+Added
+2025-01-01
+2025-31-12
+20
+
+OrangeHRM OS 5.7
+
+© 2005 - 2025 OrangeHRM, Inc. All rights reserved.
+2025-09-12 15:15:15,729 - INFO -  Navigated to Assign Leave tab
+2025-09-12 15:15:15,743 - INFO - Already on Assign Leave page — skipping navigation
+2025-09-12 15:15:15,743 - INFO - Attempt 1: Selecting employee 'Thillai Devi K'
+2025-09-12 15:15:17,840 - INFO -  Employee resolved: Thillai Devi K
+2025-09-12 15:15:17,840 - INFO - Proceeding with leave assignment for: Thillai Devi K
+2025-09-12 15:15:18,834 - INFO -  Leave Type selected: CAN - Vacation
+2025-09-12 15:15:20,016 - INFO -  From Date selected: 2025-10-10
+2025-09-12 15:15:21,196 - INFO -  To Date selected: 2025-10-10
+2025-09-12 15:15:23,291 - INFO -  Comment filled: Vacation Leave
+2025-09-12 15:15:24,304 - WARNING - Duration dropdown not rendered — skipping duration selection
+2025-09-12 15:15:25,395 - INFO - Assign button clicked
+2025-09-12 15:15:25,400 - DEBUG - Toast not visible yet — attempt 1
+2025-09-12 15:15:26,416 - DEBUG - Toast not visible yet — attempt 2
+2025-09-12 15:15:27,424 - DEBUG - Toast not visible yet — attempt 3
+2025-09-12 15:15:28,432 - DEBUG - Toast not visible yet — attempt 4
+2025-09-12 15:15:29,449 - DEBUG - Toast not visible yet — attempt 5
+2025-09-12 15:15:30,457 - INFO - Confirm Leave Assignment modal detected — likely due to zero leave balance
+2025-09-12 15:15:30,794 - INFO -  Ok button clicked to confirm leave assignment
+2025-09-12 15:15:35,812 - ERROR -  Leave assignment failed: Page.wait_for_selector: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("div.oxd-overlay") to be detached
+    15 × locator resolved to hidden <div role="dialog" data-v-fa3720ff="" data-v-edf1c7c7="" class="oxd-overlay oxd-overlay--flex oxd-overlay--flex-centered oxd-overlay--hide oxd-layout-overlay"></div>
+
+2025-09-12 15:15:35,902 - INFO -  Navigating to Leave Entitlements and Usage Report...
+2025-09-12 15:15:36,567 - INFO -  Reports tab clicked
+2025-09-12 15:15:37,341 - INFO -  Leave Entitlements and Usage Report link clicked
+2025-09-12 15:15:37,562 - INFO -  Leave Entitlements and Usage Report page loaded successfully
+2025-09-12 15:15:37,879 - INFO -  Leave Type radio button selected
+2025-09-12 15:15:38,268 - INFO -  Dropdown clicked
+2025-09-12 15:15:38,631 - INFO -  Leave Type selected: CAN - Vacation
+2025-09-12 15:15:38,961 - INFO -  'Employee' radio button selected
+2025-09-12 15:15:40,628 - INFO -  Selected employee: Thillai Devi K
+2025-09-12 15:15:41,285 - INFO -  Generate button clicked
+2025-09-12 15:16:13,296 - ERROR -  Error during leave report validation: Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("table")
+

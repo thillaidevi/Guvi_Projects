@@ -1,0 +1,69 @@
+2025-09-12 15:14:40,090 - INFO - Launching browser: chromium, headed mode: True
+2025-09-12 15:16:13,535 - INFO -  Screenshot captured: reports\screenshots\tests_test_assign_leave_to_employee.py\test_assign_leave_and_validate_report_passed_20250912_151613.png
+2025-09-12 15:16:30,702 - INFO -  Screenshot captured: reports\screenshots\tests_test_claim_request_by_employee.py\test_claim_request_by_employee_failed_20250912_151630.png
+2025-09-12 15:16:30,736 - INFO -  Launching Edge browser | Headed: True
+2025-09-12 15:16:43,977 - INFO -  Credentials entered successfully
+2025-09-12 15:16:52,141 - INFO -  Employee 'Thillai Devi K' added successfully
+2025-09-12 15:16:53,298 - INFO -  Navigating to System Users and clicking Add
+2025-09-12 15:16:54,562 - INFO -  Add User form opened successfully
+2025-09-12 15:16:54,562 - INFO - Starting user creation for: testuser
+2025-09-12 15:16:54,691 - INFO - Selecting dropdown option: ESS
+2025-09-12 15:16:55,693 - INFO - Selected: ESS
+2025-09-12 15:16:55,693 - INFO - Selecting dropdown option: Enabled
+2025-09-12 15:16:56,691 - INFO - Selected: Enabled
+2025-09-12 15:17:00,481 - INFO - Username accepted: testuser
+2025-09-12 15:17:01,468 - INFO - Save clicked for username: testuser
+2025-09-12 15:17:01,476 - WARNING - Waiting for confirmation... attempt 1
+2025-09-12 15:17:01,476 - DEBUG - Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser
+2025-09-12 15:17:02,500 - WARNING - Waiting for confirmation... attempt 2
+2025-09-12 15:17:02,500 - DEBUG - Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser
+2025-09-12 15:17:03,523 - INFO - Post-save confirmation detected on attempt 3
+2025-09-12 15:17:04,536 - INFO - User creation completed successfully for: testuser
+2025-09-12 15:17:04,536 - INFO - Searching for user: testuser
+2025-09-12 15:17:06,860 - INFO - System Users page header detected
+2025-09-12 15:17:07,386 - INFO - Selecting dropdown option: ESS
+2025-09-12 15:17:08,374 - INFO - Selected: ESS
+2025-09-12 15:17:08,888 - INFO - Selecting dropdown option: Enabled
+2025-09-12 15:17:09,882 - INFO - Selected: Enabled
+2025-09-12 15:17:12,178 - WARNING -  Retry 1: Employee option not visible yet
+2025-09-12 15:17:13,516 - INFO -  Employee name selected: Thillai Devi K
+2025-09-12 15:17:14,328 - INFO -  Username input found via class-based locator
+2025-09-12 15:17:14,964 - WARNING -  Username typing failed: Locator.type() got an unexpected keyword argument 'force'
+2025-09-12 15:17:16,815 - INFO -  Search triggered with force click
+2025-09-12 15:17:24,826 - ERROR -  Table body never became visible: Page.wait_for_selector: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator("div.oxd-table-body") to be visible
+    18 × locator resolved to hidden <div role="rowgroup" data-v-8bca8bf7="" data-v-f2168256="" class="oxd-table-body"></div>
+
+2025-09-12 15:17:24,927 - ERROR -  Search failed: System Users table not visible
+2025-09-12 15:17:25,474 - INFO -  Edge browser closed
+2025-09-12 15:17:53,009 - INFO -  Screenshot captured: reports\screenshots\tests_test_dashboard_main_menu_items_visibility_clickability.py\test_dashboard_main_menu_items_visibility_clickability_passed_20250912_151752.png
+2025-09-12 15:18:01,419 - INFO -  Screenshot captured: reports\screenshots\tests_test_forgot_password_flow.py\test_forgot_password_flow_passed_20250912_151801.png
+2025-09-12 15:18:07,892 - INFO -  Screenshot captured: reports\screenshots\tests_test_home_url_accessibility.py\test_home_url_accessibility_passed_20250912_151807.png
+2025-09-12 15:18:19,159 - INFO -  Screenshot captured: reports\screenshots\tests_test_login.py\test_orangehrm_login[1-Admin-admin123-pass]_passed_20250912_151819.png
+2025-09-12 15:18:27,968 - INFO -  Screenshot captured: reports\screenshots\tests_test_login.py\test_orangehrm_login[2-manager@guvi.in-password@123 -fail]_passed_20250912_151827.png
+2025-09-12 15:18:36,635 - INFO -  Screenshot captured: reports\screenshots\tests_test_login.py\test_orangehrm_login[3-suman@guvi.in-password@123-fail]_passed_20250912_151836.png
+2025-09-12 15:18:48,411 - INFO -  Screenshot captured: reports\screenshots\tests_test_login_fields_visibility.py\test_login_fields_visibility_passed_20250912_151847.png
+2025-09-12 15:18:56,554 - INFO -  Credentials entered successfully
+2025-09-12 15:19:03,474 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[personal_details]_passed_20250912_151903.png
+2025-09-12 15:19:10,646 - INFO -  Credentials entered successfully
+2025-09-12 15:19:16,717 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[contact_details]_passed_20250912_151916.png
+2025-09-12 15:19:23,750 - INFO -  Credentials entered successfully
+2025-09-12 15:19:29,492 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[emergency_contacts]_passed_20250912_151929.png
+2025-09-12 15:19:35,236 - INFO -  Credentials entered successfully
+2025-09-12 15:19:41,016 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[dependents]_passed_20250912_151940.png
+2025-09-12 15:19:47,920 - INFO -  Credentials entered successfully
+2025-09-12 15:19:54,012 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[immigration]_passed_20250912_151953.png
+2025-09-12 15:20:01,041 - INFO -  Credentials entered successfully
+2025-09-12 15:20:06,912 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[job]_passed_20250912_152006.png
+2025-09-12 15:20:14,100 - INFO -  Credentials entered successfully
+2025-09-12 15:20:20,024 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[salary]_passed_20250912_152019.png
+2025-09-12 15:20:35,209 - INFO -  Credentials entered successfully
+2025-09-12 15:20:41,039 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[report_to]_passed_20250912_152040.png
+2025-09-12 15:20:56,302 - INFO -  Credentials entered successfully
+2025-09-12 15:21:03,073 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[qualifications]_passed_20250912_152102.png
+2025-09-12 15:21:18,596 - INFO -  Credentials entered successfully
+2025-09-12 15:21:24,469 - INFO -  Screenshot captured: reports\screenshots\tests_test_my_info_menu_items_validation.py\test_my_info_menu_items_validation[memberships]_passed_20250912_152124.png
+2025-09-12 15:21:24,511 - INFO -  Launching Edge browser | Headed: True
+2025-09-12 15:22:09,420 - INFO -  Screenshot captured: reports\screenshots\tests_test_validate_created_user_in_admin_list.py\test_validate_created_user_in_admin_list_passed_20250912_152209.png
+2025-09-12 15:22:09,723 - INFO -  Edge browser closed

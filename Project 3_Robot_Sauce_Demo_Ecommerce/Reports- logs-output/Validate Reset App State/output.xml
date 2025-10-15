@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-19T21:22:48.668518" rpa="false" schemaversion="5">
+<suite id="s1" name="Validate Reset App State" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\validate_reset_app_state.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:22:48.900503" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:22:48.900339" elapsed="1.734865"/>
+</kw>
+<test id="s1-t1" name="Validate Reset App State Functionality" line="12">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in as a standard user and verify successful login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:22:50.636111" elapsed="0.000137"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:22:50.659446" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:22:50.785453" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:22:50.868097" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:22:50.996117" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:23:01.208356" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T21:22:50.636435" elapsed="10.572071"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait until product listing page is fully loaded</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:23:01.208878" elapsed="0.000129"/>
+</kw>
+<kw name="Wait Until Inventory Page Is Loaded" owner="InventoryLibrary">
+<msg time="2025-09-19T21:23:01.218977" level="INFO"> Inventory page loaded successfully.</msg>
+<status status="PASS" start="2025-09-19T21:23:01.209230" elapsed="0.009857"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Randomly select 4 products from the catalog</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:23:01.219360" elapsed="0.000110"/>
+</kw>
+<kw name="Select Random Products" owner="InventoryLibrary">
+<msg time="2025-09-19T21:23:01.313909" level="INFO"> Selected 4 random products.</msg>
+<arg>4</arg>
+<status status="PASS" start="2025-09-19T21:23:01.219669" elapsed="0.094346"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Add selected products to cart and validate cart count</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:23:01.314492" elapsed="0.000118"/>
+</kw>
+<kw name="Add Selected Products To Cart And Validate" owner="InventoryLibrary">
+<msg time="2025-09-19T21:23:01.360076" level="INFO"> Added product 1 to cart.</msg>
+<msg time="2025-09-19T21:23:01.400029" level="INFO"> Added product 2 to cart.</msg>
+<msg time="2025-09-19T21:23:01.440659" level="INFO"> Added product 3 to cart.</msg>
+<msg time="2025-09-19T21:23:01.481275" level="INFO"> Added product 4 to cart.</msg>
+<msg time="2025-09-19T21:23:01.505495" level="INFO"> Cart icon shows correct count: 4</msg>
+<status status="PASS" start="2025-09-19T21:23:01.314794" elapsed="0.190847"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:23:01.649869" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Reset%20App%20State%20Functionality_before_reset_with_products_screenshot.png"&gt;&lt;img src="Validate%20Reset%20App%20State%20Functionality_before_reset_with_products_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_before_reset_with_products_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:23:01.505942" elapsed="0.144044"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Trigger reset and validate cart and product button states</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:23:01.650366" elapsed="0.000096"/>
+</kw>
+<kw name="Reset App State And Validate" owner="InventoryLibrary">
+<msg time="2025-09-19T21:23:01.650685" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<msg time="2025-09-19T21:23:01.930103" level="INFO">Clicking element 'id=reset_sidebar_link'.</msg>
+<msg time="2025-09-19T21:23:01.974168" level="INFO"> Reset App State triggered.</msg>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:23:02.245426" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T21:23:02.245621" level="FAIL">Element with locator 'class=shopping_cart_badge' not found.</msg>
+<arg>class=shopping_cart_badge</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-09-19T21:23:02.101158" elapsed="0.147082">Element with locator 'class=shopping_cart_badge' not found.</status>
+</kw>
+<msg time="2025-09-19T21:23:02.248334" level="INFO"> Cart badge is no longer visible — cart is cleared.</msg>
+<msg time="2025-09-19T21:23:02.290857" level="INFO"> All product buttons reset to 'Add to cart'.</msg>
+<status status="PASS" start="2025-09-19T21:23:01.650610" elapsed="0.640335"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:23:02.412462" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Reset%20App%20State%20Functionality_after_reset_screenshot.png"&gt;&lt;img src="Validate%20Reset%20App%20State%20Functionality_after_reset_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_after_reset_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:23:02.291265" elapsed="0.121316"/>
+</kw>
+<doc>Add products to cart, navigate the site, trigger "Reset App State" from the menu,
+ and confirm that cart and selections are cleared.</doc>
+<tag>Reset</tag>
+<tag>Smoke</tag>
+<tag>State</tag>
+<status status="PASS" start="2025-09-19T21:22:50.635450" elapsed="11.777395"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:23:02.413680" elapsed="2.212298"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:22:48.670171" elapsed="15.955949"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Reset</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">State</stat>
+</tag>
+<suite>
+<stat name="Validate Reset App State" id="s1" pass="1" fail="0" skip="0">Validate Reset App State</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

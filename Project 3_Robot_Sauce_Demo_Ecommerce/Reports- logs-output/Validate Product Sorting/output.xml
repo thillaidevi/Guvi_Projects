@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-19T21:13:06.641643" rpa="false" schemaversion="5">
+<suite id="s1" name="Validate Product Sorting" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\validate_product_sorting.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:13:06.872060" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:13:06.871887" elapsed="1.639784"/>
+</kw>
+<test id="s1-t1" name="Validate Product Sorting Functionality" line="12">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in as a standard user and verify successful authentication</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:13:08.513282" elapsed="0.000388"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:13:08.541655" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:13:08.661864" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:13:08.735044" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:13:08.825756" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:13:19.037099" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T21:13:08.514209" elapsed="10.522995"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait until the inventory page is fully loaded and ready for interaction</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:13:19.037585" elapsed="0.000129"/>
+</kw>
+<kw name="Wait Until Inventory Page Is Loaded" owner="InventoryLibrary">
+<msg time="2025-09-19T21:13:19.048527" level="INFO"> Inventory page loaded successfully.</msg>
+<status status="PASS" start="2025-09-19T21:13:19.037950" elapsed="0.010674"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Apply sorting by "Price (low to high)" and validate product order</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:13:19.048923" elapsed="0.000107"/>
+</kw>
+<kw name="Validate Product Sorting" owner="InventoryLibrary">
+<msg time="2025-09-19T21:13:19.049281" level="INFO">Selecting options from selection list 'class=product_sort_container' by label Price (low to high).</msg>
+<msg time="2025-09-19T21:13:19.130478" level="INFO"> Selected sort option: Price (low to high)</msg>
+<msg time="2025-09-19T21:13:19.282239" level="INFO"> Products sorted by price (low to high).</msg>
+<arg>Price (low to high)</arg>
+<status status="PASS" start="2025-09-19T21:13:19.049192" elapsed="0.233153"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:13:19.422163" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Product%20Sorting%20Functionality_Price%20%28low%20to%20high%29_screenshot.png"&gt;&lt;img src="Validate%20Product%20Sorting%20Functionality_Price%20%28low%20to%20high%29_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_Price (low to high)_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:13:19.282687" elapsed="0.139584"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Apply sorting by "Name (Z to A)" and validate alphabetical order</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:13:19.422589" elapsed="0.000117"/>
+</kw>
+<kw name="Validate Product Sorting" owner="InventoryLibrary">
+<msg time="2025-09-19T21:13:19.423001" level="INFO">Selecting options from selection list 'class=product_sort_container' by label Name (Z to A).</msg>
+<msg time="2025-09-19T21:13:19.482902" level="INFO"> Selected sort option: Name (Z to A)</msg>
+<msg time="2025-09-19T21:13:19.611486" level="INFO"> Products sorted by name (Z to A).</msg>
+<arg>Name (Z to A)</arg>
+<status status="PASS" start="2025-09-19T21:13:19.422893" elapsed="0.188693"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:13:19.729052" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Product%20Sorting%20Functionality_Name%20%28Z%20to%20A%29_screenshot.png"&gt;&lt;img src="Validate%20Product%20Sorting%20Functionality_Name%20%28Z%20to%20A%29_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_Name (Z to A)_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:13:19.611979" elapsed="0.117200"/>
+</kw>
+<doc>Change the sorting option on the products page and verify that the product list updates accordingly.</doc>
+<tag>Smoke</tag>
+<tag>Sorting</tag>
+<tag>UI</tag>
+<status status="PASS" start="2025-09-19T21:13:08.511969" elapsed="11.217529"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:13:19.730452" elapsed="2.208912"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:13:06.643178" elapsed="15.296287"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">Sorting</stat>
+<stat pass="1" fail="0" skip="0">UI</stat>
+</tag>
+<suite>
+<stat name="Validate Product Sorting" id="s1" pass="1" fail="0" skip="0">Validate Product Sorting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

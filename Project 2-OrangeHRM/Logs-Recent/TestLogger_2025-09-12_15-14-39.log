@@ -1,0 +1,108 @@
+2025-09-12 15:14:45,562 - INFO - Submitting login form
+2025-09-12 15:14:47,271 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:14:50,722 - INFO - Clicking Add Employee
+2025-09-12 15:14:51,623 - INFO - Filling employee details: Thillai Devi K
+2025-09-12 15:14:52,393 - INFO - Saving employee record
+2025-09-12 15:14:53,721 - INFO -  Employee Thillai Devi K added successfully
+2025-09-12 15:16:20,142 - INFO - Submitting login form
+2025-09-12 15:16:41,956 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:16:43,209 - INFO - Login page loaded successfully
+2025-09-12 15:16:43,977 - INFO - Submitting login form
+2025-09-12 15:16:45,995 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:16:49,137 - INFO - Clicking Add Employee
+2025-09-12 15:16:50,036 - INFO - Filling employee details: Thillai Devi K
+2025-09-12 15:16:50,806 - INFO - Saving employee record
+2025-09-12 15:16:52,141 - INFO -  Employee Thillai Devi K added successfully
+2025-09-12 15:17:31,183 - INFO - Submitting login form
+2025-09-12 15:17:33,194 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:18:06,485 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:18:07,801 - INFO - Login page loaded successfully
+2025-09-12 15:18:46,118 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:18:47,623 - INFO - Login page loaded successfully
+2025-09-12 15:18:54,077 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:18:55,506 - INFO - Login page loaded successfully
+2025-09-12 15:18:56,555 - INFO - Submitting login form
+2025-09-12 15:18:58,799 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:19:03,299 - INFO -  personal_details tab loaded successfully
+2025-09-12 15:19:08,559 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:19:09,867 - INFO - Login page loaded successfully
+2025-09-12 15:19:10,646 - INFO - Submitting login form
+2025-09-12 15:19:12,348 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:19:16,567 - INFO -  contact_details tab loaded successfully
+2025-09-12 15:19:21,714 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:19:22,969 - INFO - Login page loaded successfully
+2025-09-12 15:19:23,751 - INFO - Submitting login form
+2025-09-12 15:19:25,739 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:19:29,342 - INFO -  emergency_contacts tab loaded successfully
+2025-09-12 15:19:33,218 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:19:34,476 - INFO - Login page loaded successfully
+2025-09-12 15:19:35,236 - INFO - Submitting login form
+2025-09-12 15:19:37,301 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:19:40,886 - INFO -  dependents tab loaded successfully
+2025-09-12 15:19:45,831 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:19:47,130 - INFO - Login page loaded successfully
+2025-09-12 15:19:47,920 - INFO - Submitting login form
+2025-09-12 15:19:49,566 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:19:53,841 - INFO -  immigration tab loaded successfully
+2025-09-12 15:19:59,004 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:20:00,269 - INFO - Login page loaded successfully
+2025-09-12 15:20:01,042 - INFO - Submitting login form
+2025-09-12 15:20:03,099 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:20:06,755 - INFO -  job tab loaded successfully
+2025-09-12 15:20:12,000 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:20:13,318 - INFO - Login page loaded successfully
+2025-09-12 15:20:14,100 - INFO - Submitting login form
+2025-09-12 15:20:15,766 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:20:19,858 - INFO -  salary tab loaded successfully
+2025-09-12 15:20:33,089 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:20:34,447 - INFO - Login page loaded successfully
+2025-09-12 15:20:35,210 - INFO - Submitting login form
+2025-09-12 15:20:37,231 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:20:40,864 - INFO -  report_to tab loaded successfully
+2025-09-12 15:20:54,240 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:20:55,512 - INFO - Login page loaded successfully
+2025-09-12 15:20:56,302 - INFO - Submitting login form
+2025-09-12 15:20:58,061 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:21:02,783 - INFO -  qualifications tab loaded successfully
+2025-09-12 15:21:16,501 - INFO - Navigating to login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-09-12 15:21:17,780 - INFO - Login page loaded successfully
+2025-09-12 15:21:18,597 - INFO - Submitting login form
+2025-09-12 15:21:20,258 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:21:24,319 - INFO -  memberships tab loaded successfully
+2025-09-12 15:21:30,501 - INFO - Submitting login form
+2025-09-12 15:21:32,520 - INFO - Login successful, current URL: https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-12 15:21:33,896 - INFO - Clicking Add Employee
+2025-09-12 15:21:36,263 - INFO - Filling employee details: Thillai Devi K
+2025-09-12 15:21:37,088 - INFO - Saving employee record
+2025-09-12 15:21:38,426 - INFO -  Employee Thillai Devi K added successfully
+2025-09-12 15:21:39,599 - INFO -  Navigating to System Users and clicking Add
+2025-09-12 15:21:42,429 - INFO -  Add User form opened successfully
+2025-09-12 15:21:42,429 - INFO - Starting user creation for: testuser
+2025-09-12 15:21:42,556 - INFO - Selecting dropdown option: ESS
+2025-09-12 15:21:43,556 - INFO - Selected: ESS
+2025-09-12 15:21:43,556 - INFO - Selecting dropdown option: Enabled
+2025-09-12 15:21:44,538 - INFO - Selected: Enabled
+2025-09-12 15:21:48,277 - WARNING - Username 'testuser' already exists — retrying
+2025-09-12 15:21:50,036 - INFO - Username accepted: testuser0708
+2025-09-12 15:21:51,022 - INFO - Save clicked for username: testuser0708
+2025-09-12 15:21:51,031 - WARNING - Waiting for confirmation... attempt 1
+2025-09-12 15:21:51,031 - DEBUG - Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser
+2025-09-12 15:21:52,047 - WARNING - Waiting for confirmation... attempt 2
+2025-09-12 15:21:52,048 - DEBUG - Current URL: https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveSystemUser
+2025-09-12 15:21:53,061 - INFO - Post-save confirmation detected on attempt 3
+2025-09-12 15:21:54,063 - INFO - User creation completed successfully for: testuser0708
+2025-09-12 15:21:54,064 - INFO - Searching for user: testuser
+2025-09-12 15:21:58,032 - INFO - System Users page header detected
+2025-09-12 15:21:58,548 - INFO - Selecting dropdown option: ESS
+2025-09-12 15:21:59,632 - INFO - Selected: ESS
+2025-09-12 15:22:00,167 - INFO - Selecting dropdown option: Enabled
+2025-09-12 15:22:01,210 - INFO - Selected: Enabled
+2025-09-12 15:22:03,499 - WARNING -  Retry 1: Employee option not visible yet
+2025-09-12 15:22:04,839 - INFO -  Employee name selected: Thillai Devi K
+2025-09-12 15:22:05,658 - INFO -  Username input found via class-based locator
+2025-09-12 15:22:06,279 - WARNING -  Username typing failed: Locator.type() got an unexpected keyword argument 'force'
+2025-09-12 15:22:08,193 - INFO -  Search triggered with force click
+2025-09-12 15:22:09,293 - INFO -  Table body became visible after search
+2025-09-12 15:22:09,302 - INFO - Found 1 row(s) on attempt 1
+2025-09-12 15:22:09,319 - INFO -  Row values: username='testuser0708', role='ESS', employee='Thillai Devi K', status='Enabled'
+2025-09-12 15:22:09,319 - INFO -  Username validation passed: 'testuser0708' begins with 'testuser'

@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-09-19T21:32:18.732272" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests">
+<suite id="s1-s1" name="Cart Icon Visibility" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\cart_icon_visibility.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:32:18.964724" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:32:18.964470" elapsed="1.707300"/>
+</kw>
+<test id="s1-s1-t1" name="Check Cart Icon Visibility" line="17">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in using a valid user and confirm expected login outcome</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:20.672569" elapsed="0.000121"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:32:20.692584" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:32:20.810364" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:32:20.887330" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:32:20.978414" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:32:31.199814" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>${VALID_USERNAME}</arg>
+<arg>${EXPECTATION}</arg>
+<status status="PASS" start="2025-09-19T21:32:20.672883" elapsed="10.527033"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate that the dashboard is displayed if login was successful</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:31.200279" elapsed="0.000122"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T21:32:31.206085" level="INFO">Dashboard visible for user: standard_user</msg>
+<arg>${VALID_USERNAME}</arg>
+<arg>${EXPECTATION}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T21:32:31.200627" elapsed="0.005549"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Check that the cart icon is present on the product listing page</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:31.206405" elapsed="0.000081"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:31.213244" level="INFO">Current page contains element 'id=shopping_cart_container'.</msg>
+<arg>id=shopping_cart_container</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-09-19T21:32:31.206635" elapsed="0.006686"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:31.341701" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Check%20Cart%20Icon%20Visibility_standard_user_EXPECT_SUCCESS_screenshot.png"&gt;&lt;img src="Check%20Cart%20Icon%20Visibility_standard_user_EXPECT_SUCCESS_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_${VALID_USERNAME}_${EXPECTATION}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:32:31.213593" elapsed="0.128212"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log confirmation that the cart icon is visible after login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:31.342104" elapsed="0.000120"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T21:32:31.342834" level="INFO">Cart icon is visible after login</msg>
+<arg>Cart icon is visible after login</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T21:32:31.342417" elapsed="0.000458"/>
+</kw>
+<doc>Verify if the cart icon is visible on the product listing page post login.</doc>
+<tag>cart</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-09-19T21:32:20.671987" elapsed="10.671145"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:32:31.343852" elapsed="2.199381"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:32:18.757879" elapsed="14.785529"/>
+</suite>
+<suite id="s1-s2" name="Complete Checkout And Validate Order" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\complete_checkout_and_validate_order.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:32:33.549748" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:32:33.549592" elapsed="1.921074"/>
+</kw>
+<test id="s1-s2-t1" name="Complete Checkout And Validate Order" line="12">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in as a standard user and verify successful authentication</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:35.471975" elapsed="0.000189"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:32:35.492767" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:32:35.602096" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:32:35.679798" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:32:35.767535" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:32:45.994002" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T21:32:35.472419" elapsed="10.521676"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait until the inventory page is fully loaded and ready for interaction</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:45.994451" elapsed="0.000122"/>
+</kw>
+<kw name="Wait Until Inventory Page Is Loaded" owner="InventoryLibrary">
+<msg time="2025-09-19T21:32:46.005050" level="INFO"> Inventory page loaded successfully.</msg>
+<status status="PASS" start="2025-09-19T21:32:45.994838" elapsed="0.010287"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Randomly select 4 products from the catalog to simulate varied user behavior</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:46.005437" elapsed="0.000115"/>
+</kw>
+<kw name="Select Random Products" owner="InventoryLibrary">
+<msg time="2025-09-19T21:32:46.098559" level="INFO"> Selected 4 random products.</msg>
+<arg>4</arg>
+<status status="PASS" start="2025-09-19T21:32:46.005729" elapsed="0.092931"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log the names and prices of the selected products for validation and reporting</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:46.098967" elapsed="0.000109"/>
+</kw>
+<kw name="Log Selected Product Details" owner="InventoryLibrary">
+<msg time="2025-09-19T21:32:46.099366" level="INFO">1. Product: Sauce Labs Onesie | Price: $7.99</msg>
+<msg time="2025-09-19T21:32:46.099398" level="INFO">2. Product: Sauce Labs Bike Light | Price: $9.99</msg>
+<msg time="2025-09-19T21:32:46.099632" level="INFO">3. Product: Sauce Labs Bolt T-Shirt | Price: $15.99</msg>
+<msg time="2025-09-19T21:32:46.099672" level="INFO">4. Product: Sauce Labs Backpack | Price: $29.99</msg>
+<status status="PASS" start="2025-09-19T21:32:46.099281" elapsed="0.000436"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Capture a screenshot of selected products for visual confirmation and debugging</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:46.099892" elapsed="0.000076"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:46.219641" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Complete%20Checkout%20And%20Validate%20Order_screenshot1.png"&gt;&lt;img src="Complete%20Checkout%20And%20Validate%20Order_screenshot1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_screenshot1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:32:46.100218" elapsed="0.119528"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Add selected products to the cart and validate that the cart count matches the selection</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:46.220049" elapsed="0.000106"/>
+</kw>
+<kw name="Add Selected Products To Cart And Validate" owner="InventoryLibrary">
+<msg time="2025-09-19T21:32:46.270992" level="INFO"> Added product 1 to cart.</msg>
+<msg time="2025-09-19T21:32:46.312898" level="INFO"> Added product 2 to cart.</msg>
+<msg time="2025-09-19T21:32:46.353263" level="INFO"> Added product 3 to cart.</msg>
+<msg time="2025-09-19T21:32:46.393230" level="INFO"> Added product 4 to cart.</msg>
+<msg time="2025-09-19T21:32:46.419518" level="INFO"> Cart icon shows correct count: 4</msg>
+<status status="PASS" start="2025-09-19T21:32:46.220333" elapsed="0.199295"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Navigate to the cart and verify that product details match the selected items</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:46.419918" elapsed="0.000095"/>
+</kw>
+<kw name="Validate Cart Contents Against Selected Products" owner="InventoryLibrary">
+<msg time="2025-09-19T21:32:46.420303" level="INFO">Clicking element 'class=shopping_cart_link'.</msg>
+<msg time="2025-09-19T21:32:46.595799" level="INFO"> Cart contents match selected products.</msg>
+<status status="PASS" start="2025-09-19T21:32:46.420208" elapsed="0.175722"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:46.686491" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Complete%20Checkout%20And%20Validate%20Order_screenshot2.png"&gt;&lt;img src="Complete%20Checkout%20And%20Validate%20Order_screenshot2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_screenshot2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:32:46.596266" elapsed="0.090387"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Proceed through the checkout flow and confirm that the order is successfully placed</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:46.687041" elapsed="0.000169"/>
+</kw>
+<kw name="Complete Checkout And Validate Order" owner="InventoryLibrary">
+<msg time="2025-09-19T21:32:46.687521" level="INFO">Clicking element 'class=shopping_cart_link'.</msg>
+<msg time="2025-09-19T21:32:46.752014" level="INFO">Clicking element 'id=checkout'.</msg>
+<msg time="2025-09-19T21:32:46.810164" level="INFO">Typing text 'Rajesh' into text field 'id=first-name'.</msg>
+<msg time="2025-09-19T21:32:46.869478" level="INFO">Typing text 'C' into text field 'id=last-name'.</msg>
+<msg time="2025-09-19T21:32:46.919644" level="INFO">Typing text '600119' into text field 'id=postal-code'.</msg>
+<msg time="2025-09-19T21:32:46.975658" level="INFO">Clicking element 'id=continue'.</msg>
+<msg time="2025-09-19T21:32:47.137476" level="INFO"> Screenshot saved: screenshots/order_summary.png</msg>
+<msg time="2025-09-19T21:32:47.137577" level="INFO">Clicking element 'id=finish'.</msg>
+<msg time="2025-09-19T21:32:47.195594" level="INFO"> Order completed and confirmation message received.</msg>
+<status status="PASS" start="2025-09-19T21:32:46.687424" elapsed="0.508277"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:47.280859" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Complete%20Checkout%20And%20Validate%20Order_screenshot3.png"&gt;&lt;img src="Complete%20Checkout%20And%20Validate%20Order_screenshot3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_screenshot3.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:32:47.196157" elapsed="0.084816"/>
+</kw>
+<doc>Randomly select 4 products, add them to cart, validate cart contents,
+proceed to checkout, and confirm order completion.</doc>
+<tag>Checkout</tag>
+<tag>Order</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-19T21:32:35.470925" elapsed="11.810328"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:32:47.282187" elapsed="2.235720"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:32:33.544624" elapsed="15.973395"/>
+</suite>
+<suite id="s1-s3" name="Login Invalid Credential" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\login_invalid_credential.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:32:49.521716" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:32:49.521587" elapsed="1.704782"/>
+</kw>
+<test id="s1-s3-t1" name="Login With Invalid Credentials" line="17">
+<kw name="Comment" owner="BuiltIn">
+<arg>Enter an invalid username to simulate unauthorized access</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:51.228357" elapsed="0.000231"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:51.229750" level="INFO">Typing text 'invalid_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${INVALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T21:32:51.229354" elapsed="0.113521"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Enter an invalid password to complete the invalid credential pair</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:51.343280" elapsed="0.000120"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:51.343932" level="INFO">Typing text 'wrong_password' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T21:32:51.343610" elapsed="0.115166"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Click the login button to submit the credentials</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:51.459297" elapsed="0.000179"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:51.459898" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-19T21:32:51.459700" elapsed="0.062378"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Dismiss any alert that may appear due to failed login attempt</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:51.522594" elapsed="0.000112"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:51.523138" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:32:56.653167" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T21:32:56.653377" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="FAIL" start="2025-09-19T21:32:51.523001" elapsed="5.133166">Alert not found in 5 seconds.</status>
+</kw>
+<arg>Handle Alert</arg>
+<arg>action=DISMISS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-19T21:32:51.522873" elapsed="5.133430"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate that dashboard access is denied and login fails as expected</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:32:56.656591" elapsed="0.000096"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T21:32:56.679819" level="INFO">Error message validated for user: invalid_user → 'Epic sadface: Username and password do not match any user in this service'</msg>
+<arg>${INVALID_USERNAME}</arg>
+<arg>${EXPECTATION}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T21:32:56.656966" elapsed="0.022969"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:32:56.765856" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login%20With%20Invalid%20Credentials_invalid_user_EXPECT_ERROR_screenshot.png"&gt;&lt;img src="Login%20With%20Invalid%20Credentials_invalid_user_EXPECT_ERROR_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_${INVALID_USERNAME}_${expectation}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:32:56.680272" elapsed="0.085693"/>
+</kw>
+<doc>Attempt to log in using non-standard credentials and validate the response.</doc>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="PASS" start="2025-09-19T21:32:51.226575" elapsed="5.539653"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:32:56.766909" elapsed="2.208602"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:32:49.518928" elapsed="9.456716"/>
+</suite>
+<suite id="s1-s4" name="Login Test" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\login_test.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:32:58.979307" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:32:58.979191" elapsed="1.836181"/>
+</kw>
+<test id="s1-s4-t1" name="Login – standard_user should succeed" line="16">
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate login for standard_user (expected to succeed)</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:00.816802" elapsed="0.000182"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T21:33:00.818467" level="INFO">${username} = standard_user</msg>
+<var>${username}</var>
+<arg>standard_user</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T21:33:00.817256" elapsed="0.001271"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T21:33:00.819040" level="INFO">${expectation} = EXPECT_SUCCESS</msg>
+<var>${expectation}</var>
+<arg>EXPECT_SUCCESS</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T21:33:00.818837" elapsed="0.000252"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:33:00.840058" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:33:00.957578" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:33:01.032709" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:33:01.129099" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:33:11.346268" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<status status="PASS" start="2025-09-19T21:33:00.819346" elapsed="10.527013"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Dismiss any unexpected alert that may appear post-login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:11.346661" elapsed="0.000102"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:33:11.347280" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:33:16.507616" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T21:33:16.507764" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="FAIL" start="2025-09-19T21:33:11.347123" elapsed="5.161530">Alert not found in 5 seconds.</status>
+</kw>
+<arg>Handle Alert</arg>
+<arg>action=DISMISS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-19T21:33:11.346958" elapsed="5.161843"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Confirm dashboard visibility based on expected login outcome and take screenshot</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:16.509077" elapsed="0.000100"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T21:33:16.515226" level="INFO">Dashboard visible for user: standard_user</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T21:33:16.509335" elapsed="0.006008"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:33:16.639781" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login%20%E2%80%93%20standard_user%20should%20succeed_standard_user_EXPECT_SUCCESS_screenshot.png"&gt;&lt;img src="Login%20%E2%80%93%20standard_user%20should%20succeed_standard_user_EXPECT_SUCCESS_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_${username}_${expectation}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:33:16.515651" elapsed="0.124236"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T21:33:16.640386" level="INFO">standard_user login validated with EXPECT_SUCCESS</msg>
+<arg>${username} login validated with ${expectation}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T21:33:16.640220" elapsed="0.000257"/>
+</kw>
+<doc>Validate login for standard_user with expected success</doc>
+<tag>login</tag>
+<tag>smoke</tag>
+<tag>standard_user</tag>
+<status status="PASS" start="2025-09-19T21:33:00.815775" elapsed="15.824877"/>
+</test>
+<test id="s1-s4-t2" name="Login – performance_glitch_user should succeed" line="35">
+<kw name="Comment" owner="BuiltIn">
+<arg>Reset to login page before testing next user</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:16.641440" elapsed="0.000071"/>
+</kw>
+<kw name="Reset To Login Page" owner="LoginLibrary">
+<msg time="2025-09-19T21:33:16.641717" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" start="2025-09-19T21:33:16.641636" elapsed="0.083086"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate login for performance_glitch_user (expected to succeed but may load slowly)</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:16.725083" elapsed="0.000121"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T21:33:16.725623" level="INFO">${username} = performance_glitch_user</msg>
+<var>${username}</var>
+<arg>performance_glitch_user</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T21:33:16.725409" elapsed="0.000249"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T21:33:16.725973" level="INFO">${expectation} = EXPECT_SUCCESS</msg>
+<var>${expectation}</var>
+<arg>EXPECT_SUCCESS</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T21:33:16.725845" elapsed="0.000155"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:33:16.738297" level="INFO">Typing text 'performance_glitch_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:33:16.813063" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:33:16.878166" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:33:21.944035" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:33:32.147108" level="INFO">No alert for user: performance_glitch_user
+ No modal appeared for user: performance_glitch_user
+ Dashboard appeared for user: performance_glitch_user on attempt 1</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<status status="PASS" start="2025-09-19T21:33:16.726159" elapsed="15.421044"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Dismiss any unexpected alert that may appear post-login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:32.147572" elapsed="0.000120"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:33:32.148169" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:33:37.289365" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T21:33:37.289519" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="FAIL" start="2025-09-19T21:33:32.148032" elapsed="5.142358">Alert not found in 5 seconds.</status>
+</kw>
+<arg>Handle Alert</arg>
+<arg>action=DISMISS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-19T21:33:32.147892" elapsed="5.142588"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait for inventory page to load due to potential performance delays</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.290736" elapsed="0.000089"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>class=inventory_list</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.291055" elapsed="0.005687"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Confirm dashboard visibility based on expected login outcome and take screenshot</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.296990" elapsed="0.000095"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T21:33:37.301982" level="INFO">Dashboard appeared for user: performance_glitch_user on attempt 1</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.297232" elapsed="0.004805"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:33:37.444178" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login%20%E2%80%93%20performance_glitch_user%20should%20succeed_performance_glitch_user_EXPECT_SUCCESS_screenshot.png"&gt;&lt;img src="Login%20%E2%80%93%20performance_glitch_user%20should%20succeed_performance_glitch_user_EXPECT_SUCCESS_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_${username}_${expectation}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.302226" elapsed="0.142054"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T21:33:37.444718" level="INFO">performance_glitch_user login validated with EXPECT_SUCCESS</msg>
+<arg>${username} login validated with ${expectation}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.444556" elapsed="0.000200"/>
+</kw>
+<doc>Validate login for performance_glitch_user with expected success and slow load</doc>
+<tag>login</tag>
+<tag>performance_glitch_user</tag>
+<tag>regression</tag>
+<status status="PASS" start="2025-09-19T21:33:16.641020" elapsed="20.803908"/>
+</test>
+<test id="s1-s4-t3" name="Login – locked_out_user should fail" line="60">
+<kw name="Comment" owner="BuiltIn">
+<arg>Reset to login page before testing next user</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.445786" elapsed="0.000074"/>
+</kw>
+<kw name="Reset To Login Page" owner="LoginLibrary">
+<msg time="2025-09-19T21:33:37.446076" level="INFO">Opening url 'https://www.saucedemo.com'</msg>
+<status status="PASS" start="2025-09-19T21:33:37.445994" elapsed="0.068803"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Validate login for locked_out_user (expected to fail)</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.515085" elapsed="0.000107"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T21:33:37.515506" level="INFO">${username} = locked_out_user</msg>
+<var>${username}</var>
+<arg>locked_out_user</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.515360" elapsed="0.000173"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-09-19T21:33:37.515784" level="INFO">${expectation} = EXPECT_ERROR</msg>
+<var>${expectation}</var>
+<arg>EXPECT_ERROR</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-09-19T21:33:37.515668" elapsed="0.000137"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:33:37.526596" level="INFO">Typing text 'locked_out_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:33:37.589998" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:33:37.649931" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:33:37.709507" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:33:47.916478" level="INFO">Current page contains element 'css=h3[data-test='error']'.</msg>
+<msg time="2025-09-19T21:33:47.916565" level="INFO">Verifying element 'css=h3[data-test='error']' contains exact text 'Epic sadface: Sorry, this user has been locked out.'.</msg>
+<msg time="2025-09-19T21:33:47.931465" level="INFO">No alert for user: locked_out_user
+ No modal appeared for user: locked_out_user
+ Error message validated for locked out user: locked_out_user</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<status status="PASS" start="2025-09-19T21:33:37.516130" elapsed="10.415421"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Dismiss any unexpected alert that may appear post-login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:47.931814" elapsed="0.000094"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:33:47.932334" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:33:53.047359" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T21:33:53.047507" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>action=DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="FAIL" start="2025-09-19T21:33:47.932194" elapsed="5.116241">Alert not found in 5 seconds.</status>
+</kw>
+<arg>Handle Alert</arg>
+<arg>action=DISMISS</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-09-19T21:33:47.932069" elapsed="5.116542"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Confirm dashboard is not accessible due to login restriction</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:33:53.048857" elapsed="0.000096"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T21:33:53.065161" level="INFO">Error message validated for user: locked_out_user → 'Epic sadface: Sorry, this user has been locked out.'</msg>
+<arg>${username}</arg>
+<arg>${expectation}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T21:33:53.049163" elapsed="0.016116"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:33:53.149444" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login%20%E2%80%93%20locked_out_user%20should%20fail_locked_out_user_EXPECT_ERROR_screenshot.png"&gt;&lt;img src="Login%20%E2%80%93%20locked_out_user%20should%20fail_locked_out_user_EXPECT_ERROR_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_${username}_${expectation}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:33:53.065581" elapsed="0.083982"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T21:33:53.150039" level="INFO">locked_out_user login validated with EXPECT_ERROR</msg>
+<arg>${username} login validated with ${expectation}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T21:33:53.149848" elapsed="0.000243"/>
+</kw>
+<doc>Validate login for locked_out_user with expected failure</doc>
+<tag>locked_out_user</tag>
+<tag>login</tag>
+<tag>negative</tag>
+<status status="PASS" start="2025-09-19T21:33:37.445377" elapsed="15.704896"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:33:53.150819" elapsed="2.195261"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:32:58.976618" elapsed="56.369631"/>
+</suite>
+<suite id="s1-s5" name="Logout Functionality" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\logout_functionality.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:33:55.350214" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:33:55.350051" elapsed="4.734531"/>
+</kw>
+<test id="s1-s5-t1" name="Validate Logout Functionality" line="16">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in using a valid standard user and confirm successful login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:00.086516" elapsed="0.000158"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:34:00.105858" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:34:00.191698" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:34:00.266691" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:34:00.352708" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:34:10.558338" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T21:34:00.086913" elapsed="10.471544"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Confirm that the dashboard is displayed if login was successful</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:10.558810" elapsed="0.000123"/>
+</kw>
+<kw name="Validate Dashboard If Expected Success" owner="LoginLibrary">
+<msg time="2025-09-19T21:34:10.564402" level="INFO">Dashboard visible for user: standard_user</msg>
+<arg>${VALID_USERNAME}</arg>
+<arg>${EXPECTATION}</arg>
+<doc>Validates whether the dashboard is visible or an error message is shown,
+based on the expected login outcome for the given user.</doc>
+<status status="PASS" start="2025-09-19T21:34:10.559154" elapsed="0.005311"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:34:10.688393" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Logout%20Functionality_standard_user_EXPECT_SUCCESS_screenshot.png"&gt;&lt;img src="Validate%20Logout%20Functionality_standard_user_EXPECT_SUCCESS_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_${VALID_USERNAME}_${expectation}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:34:10.564696" elapsed="0.123801"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Click the logout button to initiate user sign-out</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:10.688797" elapsed="0.000108"/>
+</kw>
+<kw name="Click Logout Button" owner="LoginLibrary">
+<msg time="2025-09-19T21:34:10.689134" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<msg time="2025-09-19T21:34:10.961390" level="INFO">Clicking element 'id=logout_sidebar_link'.</msg>
+<msg time="2025-09-19T21:34:11.021257" level="INFO">Logout button clicked, returning to login screen</msg>
+<doc>Opens the side menu and clicks the logout button to return to the login screen.</doc>
+<status status="PASS" start="2025-09-19T21:34:10.689061" elapsed="0.332284"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Verify that the login page is displayed after logout</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:11.021622" elapsed="0.000098"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:34:11.034652" level="INFO">Current page contains element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-09-19T21:34:11.021895" elapsed="0.012860"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:34:11.115797" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Logout%20Functionality_screenshot.png"&gt;&lt;img src="Validate%20Logout%20Functionality_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:34:11.035146" elapsed="0.080755"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log confirmation that logout was successful and user is redirected</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:11.116202" elapsed="0.000132"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-19T21:34:11.116597" level="INFO">Logout successful, user returned to login screen</msg>
+<arg>Logout successful, user returned to login screen</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-19T21:34:11.116499" elapsed="0.000136"/>
+</kw>
+<doc>Check whether the logout button is visible after login and whether clicking it properly logs the user out.</doc>
+<tag>logout</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2025-09-19T21:34:00.085483" elapsed="11.031312"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:34:11.117372" elapsed="2.182230"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:33:55.347342" elapsed="17.952487"/>
+</suite>
+<suite id="s1-s6" name="Random Product Selection And Data Extraction" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\random_product_selection_and_data_extraction.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:34:13.304498" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:34:13.304350" elapsed="1.750483"/>
+</kw>
+<test id="s1-s6-t1" name="Random Product Selection And Data Extraction" line="12">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in using a valid standard user and confirm successful login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:15.055850" elapsed="0.000156"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:34:15.097933" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:34:15.199915" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:34:15.273950" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:34:15.361263" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:34:25.568323" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T21:34:15.056509" elapsed="10.511927"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait until the inventory/product listing page is fully loaded</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:25.568782" elapsed="0.000126"/>
+</kw>
+<kw name="Wait Until Inventory Page Is Loaded" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:25.578899" level="INFO"> Inventory page loaded successfully.</msg>
+<status status="PASS" start="2025-09-19T21:34:25.569093" elapsed="0.009904"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Randomly select 4 products from the available 6 to simulate varied user behavior</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:25.579275" elapsed="0.000105"/>
+</kw>
+<kw name="Select Random Products" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:25.681283" level="INFO"> Selected 4 random products.</msg>
+<arg>4</arg>
+<status status="PASS" start="2025-09-19T21:34:25.579551" elapsed="0.101852"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log the names and prices of the selected products for validation and reporting</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:25.681716" elapsed="0.000174"/>
+</kw>
+<kw name="Log Selected Product Details" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:25.682140" level="INFO">1. Product: Sauce Labs Bolt T-Shirt | Price: $15.99</msg>
+<msg time="2025-09-19T21:34:25.682169" level="INFO">2. Product: Sauce Labs Fleece Jacket | Price: $49.99</msg>
+<msg time="2025-09-19T21:34:25.682190" level="INFO">3. Product: Sauce Labs Backpack | Price: $29.99</msg>
+<msg time="2025-09-19T21:34:25.682211" level="INFO">4. Product: Sauce Labs Bike Light | Price: $9.99</msg>
+<status status="PASS" start="2025-09-19T21:34:25.682059" elapsed="0.000184"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:34:25.857428" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Random%20Product%20Selection%20And%20Data%20Extraction_screenshot.png"&gt;&lt;img src="Random%20Product%20Selection%20And%20Data%20Extraction_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:34:25.682396" elapsed="0.175164"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Capture a screenshot of selected products for visual confirmation and debugging</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:25.857990" elapsed="0.000102"/>
+</kw>
+<doc>Randomly select 4 out of the 6 listed products and fetch their names and prices.</doc>
+<status status="PASS" start="2025-09-19T21:34:15.055019" elapsed="10.803245"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:34:25.858777" elapsed="2.204333"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:34:13.300962" elapsed="14.762320"/>
+</suite>
+<suite id="s1-s7" name="Random Product Selection And Validate" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\random_product_selection_and_validate.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:34:28.071242" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:34:28.071098" elapsed="1.798154"/>
+</kw>
+<test id="s1-s7-t1" name="Random Product Selection And Cart Validation" line="12">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in using a valid standard user and confirm successful login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:29.870699" elapsed="0.000210"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:34:29.891449" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:34:30.005679" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:34:30.122473" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:34:30.224222" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:34:40.438508" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T21:34:29.871157" elapsed="10.567442"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait until the inventory/product listing page is fully loaded</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:40.438905" elapsed="0.000102"/>
+</kw>
+<kw name="Wait Until Inventory Page Is Loaded" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:40.449453" level="INFO"> Inventory page loaded successfully.</msg>
+<status status="PASS" start="2025-09-19T21:34:40.439168" elapsed="0.010388"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Randomly select 4 products from the available 6 to simulate varied user behavior</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:40.449825" elapsed="0.000103"/>
+</kw>
+<kw name="Select Random Products" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:40.576214" level="INFO"> Selected 4 random products.</msg>
+<arg>4</arg>
+<status status="PASS" start="2025-09-19T21:34:40.450091" elapsed="0.126222"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log the names and prices of the selected products for validation and reporting</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:40.576604" elapsed="0.000101"/>
+</kw>
+<kw name="Log Selected Product Details" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:40.576942" level="INFO">1. Product: Sauce Labs Backpack | Price: $29.99</msg>
+<msg time="2025-09-19T21:34:40.576969" level="INFO">2. Product: Sauce Labs Onesie | Price: $7.99</msg>
+<msg time="2025-09-19T21:34:40.576989" level="INFO">3. Product: Sauce Labs Bolt T-Shirt | Price: $15.99</msg>
+<msg time="2025-09-19T21:34:40.577008" level="INFO">4. Product: Test.allTheThings() T-Shirt (Red) | Price: $15.99</msg>
+<status status="PASS" start="2025-09-19T21:34:40.576867" elapsed="0.000173"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Capture a screenshot of selected products for visual confirmation and debugging</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:40.577177" elapsed="0.000061"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:34:40.781991" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Random%20Product%20Selection%20And%20Cart%20Validation.png"&gt;&lt;img src="Random%20Product%20Selection%20And%20Cart%20Validation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:34:40.577542" elapsed="0.204586"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Add the selected products to the cart and verify that the cart count matches the selection</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:40.782445" elapsed="0.000099"/>
+</kw>
+<kw name="Add Selected Products To Cart And Validate" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:40.838781" level="INFO"> Added product 1 to cart.</msg>
+<msg time="2025-09-19T21:34:40.884791" level="INFO"> Added product 2 to cart.</msg>
+<msg time="2025-09-19T21:34:40.928762" level="INFO"> Added product 3 to cart.</msg>
+<msg time="2025-09-19T21:34:40.972588" level="INFO"> Added product 4 to cart.</msg>
+<msg time="2025-09-19T21:34:41.008835" level="INFO"> Cart icon shows correct count: 4</msg>
+<status status="PASS" start="2025-09-19T21:34:40.782715" elapsed="0.226235"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:34:41.151646" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Random%20Product%20Selection%20And%20Cart%20Validation_with_added_products.png"&gt;&lt;img src="Random%20Product%20Selection%20And%20Cart%20Validation_with_added_products.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_with_added_products.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:34:41.009255" elapsed="0.142526"/>
+</kw>
+<doc>Randomly select 4 out of the 6 listed products and fetch their names and prices.
+Add the selected products to the cart and verify the cart item count matches.</doc>
+<tag>Cart</tag>
+<tag>Smoke</tag>
+<status status="PASS" start="2025-09-19T21:34:29.869503" elapsed="11.282576"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:34:41.152843" elapsed="2.214521"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:34:28.064564" elapsed="15.302915"/>
+</suite>
+<suite id="s1-s8" name="Validate Cart" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\validate_cart.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:34:43.371824" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:34:43.371680" elapsed="1.799414"/>
+</kw>
+<test id="s1-s8-t1" name="Random Product Selection And Cart Validation" line="12">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in as a standard user and verify successful authentication</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:45.172328" elapsed="0.000184"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:34:45.191192" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:34:45.290594" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:34:45.383153" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:34:45.477776" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:34:55.695153" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T21:34:45.172803" elapsed="10.522442"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait until the inventory page is fully loaded and ready for interaction</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:55.695604" elapsed="0.000121"/>
+</kw>
+<kw name="Wait Until Inventory Page Is Loaded" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:55.705944" level="INFO"> Inventory page loaded successfully.</msg>
+<status status="PASS" start="2025-09-19T21:34:55.695938" elapsed="0.010080"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Randomly select 4 products from the available catalog</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:55.706228" elapsed="0.000099"/>
+</kw>
+<kw name="Select Random Products" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:55.800108" level="INFO"> Selected 4 random products.</msg>
+<arg>4</arg>
+<status status="PASS" start="2025-09-19T21:34:55.706532" elapsed="0.093671"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log the names and prices of the selected products for validation</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:55.800480" elapsed="0.000093"/>
+</kw>
+<kw name="Log Selected Product Details" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:55.800790" level="INFO">1. Product: Sauce Labs Onesie | Price: $7.99</msg>
+<msg time="2025-09-19T21:34:55.800815" level="INFO">2. Product: Sauce Labs Backpack | Price: $29.99</msg>
+<msg time="2025-09-19T21:34:55.800835" level="INFO">3. Product: Sauce Labs Fleece Jacket | Price: $49.99</msg>
+<msg time="2025-09-19T21:34:55.800853" level="INFO">4. Product: Sauce Labs Bike Light | Price: $9.99</msg>
+<status status="PASS" start="2025-09-19T21:34:55.800723" elapsed="0.000160"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Capture screenshot of selected products for reporting/debugging</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:55.801020" elapsed="0.000061"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:34:55.917104" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Random%20Product%20Selection%20And%20Cart%20Validation_stage1.png"&gt;&lt;img src="Random%20Product%20Selection%20And%20Cart%20Validation_stage1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_stage1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:34:55.801304" elapsed="0.115931"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Add selected products to cart and validate that cart count matches selection</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:55.917510" elapsed="0.000094"/>
+</kw>
+<kw name="Add Selected Products To Cart And Validate" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:55.966859" level="INFO"> Added product 1 to cart.</msg>
+<msg time="2025-09-19T21:34:56.008548" level="INFO"> Added product 2 to cart.</msg>
+<msg time="2025-09-19T21:34:56.051325" level="INFO"> Added product 3 to cart.</msg>
+<msg time="2025-09-19T21:34:56.091581" level="INFO"> Added product 4 to cart.</msg>
+<msg time="2025-09-19T21:34:56.115502" level="INFO"> Cart icon shows correct count: 4</msg>
+<status status="PASS" start="2025-09-19T21:34:55.917739" elapsed="0.197869"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:34:56.259818" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Random%20Product%20Selection%20And%20Cart%20Validation_stage2.png"&gt;&lt;img src="Random%20Product%20Selection%20And%20Cart%20Validation_stage2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_stage2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:34:56.115934" elapsed="0.144021"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Navigate to cart and verify that product details match the selected items</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:34:56.260273" elapsed="0.000104"/>
+</kw>
+<kw name="Validate Cart Contents Against Selected Products" owner="InventoryLibrary">
+<msg time="2025-09-19T21:34:56.260655" level="INFO">Clicking element 'class=shopping_cart_link'.</msg>
+<msg time="2025-09-19T21:34:56.429389" level="INFO"> Cart contents match selected products.</msg>
+<status status="PASS" start="2025-09-19T21:34:56.260560" elapsed="0.168955"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:34:56.517079" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Random%20Product%20Selection%20And%20Cart%20Validation_stage3.png"&gt;&lt;img src="Random%20Product%20Selection%20And%20Cart%20Validation_stage3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_stage3.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:34:56.429826" elapsed="0.087418"/>
+</kw>
+<doc>Randomly select 4 out of the 6 listed products and fetch their names and prices.
+Add the selected products to the cart and verify the cart item count matches.
+Then navigate to the cart page and validate product details.</doc>
+<tag>Cart</tag>
+<tag>Smoke</tag>
+<tag>Validation</tag>
+<status status="PASS" start="2025-09-19T21:34:45.171285" elapsed="11.346277"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:34:56.518284" elapsed="2.239680"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:34:43.368534" elapsed="15.389538"/>
+</suite>
+<suite id="s1-s9" name="Validate Product Sorting" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\validate_product_sorting.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:34:58.762154" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:34:58.762026" elapsed="1.872113"/>
+</kw>
+<test id="s1-s9-t1" name="Validate Product Sorting Functionality" line="12">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in as a standard user and verify successful authentication</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:35:00.635394" elapsed="0.000174"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:35:00.677049" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:35:00.785779" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:35:00.860127" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:35:00.950169" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:35:11.162284" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T21:35:00.635932" elapsed="10.526457"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait until the inventory page is fully loaded and ready for interaction</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:35:11.162715" elapsed="0.000104"/>
+</kw>
+<kw name="Wait Until Inventory Page Is Loaded" owner="InventoryLibrary">
+<msg time="2025-09-19T21:35:11.173597" level="INFO"> Inventory page loaded successfully.</msg>
+<status status="PASS" start="2025-09-19T21:35:11.162992" elapsed="0.010709"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Apply sorting by "Price (low to high)" and validate product order</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:35:11.173979" elapsed="0.000145"/>
+</kw>
+<kw name="Validate Product Sorting" owner="InventoryLibrary">
+<msg time="2025-09-19T21:35:11.174388" level="INFO">Selecting options from selection list 'class=product_sort_container' by label Price (low to high).</msg>
+<msg time="2025-09-19T21:35:11.241907" level="INFO"> Selected sort option: Price (low to high)</msg>
+<msg time="2025-09-19T21:35:11.380687" level="INFO"> Products sorted by price (low to high).</msg>
+<arg>Price (low to high)</arg>
+<status status="PASS" start="2025-09-19T21:35:11.174287" elapsed="0.206494"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:35:11.497483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Product%20Sorting%20Functionality_Price%20%28low%20to%20high%29_screenshot.png"&gt;&lt;img src="Validate%20Product%20Sorting%20Functionality_Price%20%28low%20to%20high%29_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_Price (low to high)_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:35:11.381117" elapsed="0.116505"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Apply sorting by "Name (Z to A)" and validate alphabetical order</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:35:11.497923" elapsed="0.000113"/>
+</kw>
+<kw name="Validate Product Sorting" owner="InventoryLibrary">
+<msg time="2025-09-19T21:35:11.498323" level="INFO">Selecting options from selection list 'class=product_sort_container' by label Name (Z to A).</msg>
+<msg time="2025-09-19T21:35:11.558478" level="INFO"> Selected sort option: Name (Z to A)</msg>
+<msg time="2025-09-19T21:35:11.685154" level="INFO"> Products sorted by name (Z to A).</msg>
+<arg>Name (Z to A)</arg>
+<status status="PASS" start="2025-09-19T21:35:11.498224" elapsed="0.187025"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:35:11.805257" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Product%20Sorting%20Functionality_Name%20%28Z%20to%20A%29_screenshot.png"&gt;&lt;img src="Validate%20Product%20Sorting%20Functionality_Name%20%28Z%20to%20A%29_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_Name (Z to A)_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:35:11.685740" elapsed="0.119635"/>
+</kw>
+<doc>Change the sorting option on the products page and verify that the product list updates accordingly.</doc>
+<tag>Smoke</tag>
+<tag>Sorting</tag>
+<tag>UI</tag>
+<status status="PASS" start="2025-09-19T21:35:00.634402" elapsed="11.171249"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:35:11.806365" elapsed="2.201438"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:34:58.759012" elapsed="15.248909"/>
+</suite>
+<suite id="s1-s10" name="Validate Reset App State" source="C:\Users\Rajesh C\PycharmProjects\Robot_Sauce_Demo_Ecommerce\tests\validate_reset_app_state.robot">
+<kw name="Open Browser To Login Page" owner="LoginLibrary" type="SETUP">
+<msg time="2025-09-19T21:35:14.012717" level="INFO">Opening browser 'edge' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" start="2025-09-19T21:35:14.012586" elapsed="1.669173"/>
+</kw>
+<test id="s1-s10-t1" name="Validate Reset App State Functionality" line="12">
+<kw name="Comment" owner="BuiltIn">
+<arg>Log in as a standard user and verify successful login</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:35:15.682608" elapsed="0.000164"/>
+</kw>
+<kw name="Login And Validate" owner="LoginLibrary">
+<msg time="2025-09-19T21:35:15.708940" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2025-09-19T21:35:15.813449" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<msg time="2025-09-19T21:35:15.890827" level="INFO">Clicking button 'id=login-button'.</msg>
+<msg time="2025-09-19T21:35:15.977112" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-09-19T21:35:26.188435" level="INFO">No alert for user: standard_user
+ No modal appeared for user: standard_user
+ Dashboard visible for user: standard_user</msg>
+<arg>standard_user</arg>
+<arg>EXPECT_SUCCESS</arg>
+<status status="PASS" start="2025-09-19T21:35:15.683067" elapsed="10.505470"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Wait until product listing page is fully loaded</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:35:26.188893" elapsed="0.000121"/>
+</kw>
+<kw name="Wait Until Inventory Page Is Loaded" owner="InventoryLibrary">
+<msg time="2025-09-19T21:35:26.199305" level="INFO"> Inventory page loaded successfully.</msg>
+<status status="PASS" start="2025-09-19T21:35:26.189230" elapsed="0.010160"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Randomly select 4 products from the catalog</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:35:26.199629" elapsed="0.000084"/>
+</kw>
+<kw name="Select Random Products" owner="InventoryLibrary">
+<msg time="2025-09-19T21:35:26.291570" level="INFO"> Selected 4 random products.</msg>
+<arg>4</arg>
+<status status="PASS" start="2025-09-19T21:35:26.199846" elapsed="0.091827"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Add selected products to cart and validate cart count</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:35:26.291964" elapsed="0.000094"/>
+</kw>
+<kw name="Add Selected Products To Cart And Validate" owner="InventoryLibrary">
+<msg time="2025-09-19T21:35:26.334593" level="INFO"> Added product 1 to cart.</msg>
+<msg time="2025-09-19T21:35:26.371835" level="INFO"> Added product 2 to cart.</msg>
+<msg time="2025-09-19T21:35:26.411105" level="INFO"> Added product 3 to cart.</msg>
+<msg time="2025-09-19T21:35:26.451786" level="INFO"> Added product 4 to cart.</msg>
+<msg time="2025-09-19T21:35:26.475162" level="INFO"> Cart icon shows correct count: 4</msg>
+<status status="PASS" start="2025-09-19T21:35:26.292212" elapsed="0.183053"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:35:26.614674" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Reset%20App%20State%20Functionality_before_reset_with_products_screenshot.png"&gt;&lt;img src="Validate%20Reset%20App%20State%20Functionality_before_reset_with_products_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_before_reset_with_products_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:35:26.475542" elapsed="0.139273"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Trigger reset and validate cart and product button states</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-09-19T21:35:26.615261" elapsed="0.000120"/>
+</kw>
+<kw name="Reset App State And Validate" owner="InventoryLibrary">
+<msg time="2025-09-19T21:35:26.615653" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<msg time="2025-09-19T21:35:26.901778" level="INFO">Clicking element 'id=reset_sidebar_link'.</msg>
+<msg time="2025-09-19T21:35:26.944956" level="INFO"> Reset App State triggered.</msg>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:35:27.257196" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-09-19T21:35:27.257351" level="FAIL">Element with locator 'class=shopping_cart_badge' not found.</msg>
+<arg>class=shopping_cart_badge</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-09-19T21:35:27.123444" elapsed="0.135796">Element with locator 'class=shopping_cart_badge' not found.</status>
+</kw>
+<msg time="2025-09-19T21:35:27.259371" level="INFO"> Cart badge is no longer visible — cart is cleared.</msg>
+<msg time="2025-09-19T21:35:27.300784" level="INFO"> All product buttons reset to 'Add to cart'.</msg>
+<status status="PASS" start="2025-09-19T21:35:26.615552" elapsed="0.685316"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-09-19T21:35:27.416819" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Validate%20Reset%20App%20State%20Functionality_after_reset_screenshot.png"&gt;&lt;img src="Validate%20Reset%20App%20State%20Functionality_after_reset_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${TEST NAME}_after_reset_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-09-19T21:35:27.301161" elapsed="0.115773"/>
+</kw>
+<doc>Add products to cart, navigate the site, trigger "Reset App State" from the menu,
+ and confirm that cart and selections are cleared.</doc>
+<tag>Reset</tag>
+<tag>Smoke</tag>
+<tag>State</tag>
+<status status="PASS" start="2025-09-19T21:35:15.681907" elapsed="11.735304"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-19T21:35:27.417895" elapsed="2.218167"/>
+</kw>
+<status status="PASS" start="2025-09-19T21:35:14.008822" elapsed="15.627339"/>
+</suite>
+<status status="PASS" start="2025-09-19T21:32:18.733908" elapsed="190.903296"/>
+</suite>
+<statistics>
+<total>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">cart</stat>
+<stat pass="1" fail="0" skip="0">Checkout</stat>
+<stat pass="1" fail="0" skip="0">locked_out_user</stat>
+<stat pass="4" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">logout</stat>
+<stat pass="2" fail="0" skip="0">negative</stat>
+<stat pass="1" fail="0" skip="0">Order</stat>
+<stat pass="1" fail="0" skip="0">performance_glitch_user</stat>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">Reset</stat>
+<stat pass="8" fail="0" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">Sorting</stat>
+<stat pass="1" fail="0" skip="0">standard_user</stat>
+<stat pass="1" fail="0" skip="0">State</stat>
+<stat pass="1" fail="0" skip="0">UI</stat>
+<stat pass="1" fail="0" skip="0">Validation</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="12" fail="0" skip="0">Tests</stat>
+<stat name="Cart Icon Visibility" id="s1-s1" pass="1" fail="0" skip="0">Tests.Cart Icon Visibility</stat>
+<stat name="Complete Checkout And Validate Order" id="s1-s2" pass="1" fail="0" skip="0">Tests.Complete Checkout And Validate Order</stat>
+<stat name="Login Invalid Credential" id="s1-s3" pass="1" fail="0" skip="0">Tests.Login Invalid Credential</stat>
+<stat name="Login Test" id="s1-s4" pass="3" fail="0" skip="0">Tests.Login Test</stat>
+<stat name="Logout Functionality" id="s1-s5" pass="1" fail="0" skip="0">Tests.Logout Functionality</stat>
+<stat name="Random Product Selection And Data Extraction" id="s1-s6" pass="1" fail="0" skip="0">Tests.Random Product Selection And Data Extraction</stat>
+<stat name="Random Product Selection And Validate" id="s1-s7" pass="1" fail="0" skip="0">Tests.Random Product Selection And Validate</stat>
+<stat name="Validate Cart" id="s1-s8" pass="1" fail="0" skip="0">Tests.Validate Cart</stat>
+<stat name="Validate Product Sorting" id="s1-s9" pass="1" fail="0" skip="0">Tests.Validate Product Sorting</stat>
+<stat name="Validate Reset App State" id="s1-s10" pass="1" fail="0" skip="0">Tests.Validate Reset App State</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
